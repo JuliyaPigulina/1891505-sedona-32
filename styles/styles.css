@@ -246,10 +246,26 @@ text-transform: capitalize;
 }
 
 .hotel-search {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 71px;
   background-image: url("../image/catalog/catalog-background\ 1.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
+  }
+
+  .hotel-search-type{
+    width: 528px;
+  }
+
+  .hotel-search-type{
+    width: 528px;
+  }
+
+  .hotel-card{
+    display: flex;
+    width: 1056px;
+  }
 
 .hotel-card-show-more {
   font-size: 16px;
@@ -290,4 +306,8 @@ text-transform: capitalize;
   font-size: 24px;
   line-height: 31px;
   text-transform: capitalize;
+}
+
+.hotel-card-link h3{
+  text-align: left;
 }
