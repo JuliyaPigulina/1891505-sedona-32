@@ -47,12 +47,19 @@ body {
   flex-grow: 1;
 }
 
+.content-container {
+  margin: 0 auto;
+  width: 1200px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
 .navigation {
   display: flex;
   justify-self: unset;
   width: 1200px;
   margin: -7px auto;
-  padding-left: 55px;
+  padding-left: 111px;
 }
 
 .navigation-list {
@@ -60,7 +67,7 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 500px;
+  width: 478px;
   list-style-type: none;
 }
 
@@ -70,7 +77,7 @@ body {
 
 .navigation-user {
   max-width: 320px;
-  margin-left: auto;
+  margin-left: 198px;
 }
 
 .navigation-link {
@@ -98,7 +105,7 @@ body {
 }
 
 .logo {
-  margin: 0px 209px 0px 118px;
+
   z-index: 1;
 }
 
@@ -137,11 +144,37 @@ body {
   z-index: 1;
   border: 1px solid #e5e5e5;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  min-height: 180px;
+}
+
+.popover::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 191px;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  background-color: transparent;
+  box-shadow:
+   inset 0 0 0 1px #E5E5E5;
+}
+
+.popover::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 191px;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  background-color: #FFFFFF;
 }
 
 .popover-content {
   display: flex;
   flex-direction: column;
+  height:100%;
 }
 
 .popover-wrapper {
@@ -166,6 +199,20 @@ body {
   column-gap: 17px;
   text-decoration: none;
 }
+
+.card-favorite:hover {
+  opacity: 60%;
+}
+
+.card-favorite:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.card-favorite:active {
+  opacity: 30%;
+}
+
 
 .card-favorite-image {
   grid-column: 1/-1;
@@ -203,7 +250,7 @@ body {
   text-align: left;
 }
 
-.delite-button {
+.delete-button {
   width: 36px;
   height: 36px;
   padding: 0;
@@ -211,6 +258,21 @@ body {
   background-color: inherit;
   fill: rgba(0, 0, 0, 0.3);
 }
+
+.delete-button:hover {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.delete-button:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  fill: rgba(0, 0, 0, 1);
+  outline: none;
+}
+
+.delete-button:active {
+  fill: rgba(0, 0, 0, 0,1);
+}
+
 .hotel-btn {
   display: block;
   padding-top: 9px;
@@ -264,7 +326,8 @@ body {
   background-size: auto, cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 51px 371px 82px;
+  padding: 51px 331px 82px;
+
 }
 
 .logo-index {
@@ -281,7 +344,7 @@ body {
   font-size: 22px;
   line-height: 36px;
   width: 720px;
-  margin: 23px 240px 79px;
+  margin: 31px 240px 79px;
   text-align: center;
 }
 
@@ -325,8 +388,8 @@ body {
 }
 
 .advantages-title {
-  padding-top: 98px;
-  padding-bottom: 25px;
+  padding-top: 99px;
+  padding-bottom: 27px;
   margin: 0;
   font-weight: 700;
   font-size: 24px;
@@ -341,7 +404,6 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  height: 60px;
   text-transform: uppercase;
 }
 
@@ -356,7 +418,7 @@ body {
   color: #ffffff;
   width: 220px;
   height: 73px;
-  padding: 26px 90px 77px;
+  padding: 30px 90px 77px;
   margin: 0;
 }
 
@@ -413,8 +475,8 @@ body {
   margin-left: 72px;
   font-size: 20px;
   line-height: 36px;
-  padding-top: 13px;
-  padding-bottom: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: #756257;
   border-radius: 10px;
   width: 575px;
@@ -444,6 +506,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 .newsletter {
   background-image: url("../image/footer/footer-background.jpg");
@@ -499,7 +562,6 @@ body {
   border-radius: 0px 10px 10px 0px;
   height: fit-content;
   padding: 25px 19px 22px 22px;
-
 }
 
 .newsletter-button:hover {
@@ -517,7 +579,8 @@ body {
 }
 
 .date {
-  padding-bottom: 70px;
+  padding-bottom: 58px;
+  padding-top: 30px;
   margin: 0px;
 }
 
@@ -560,7 +623,6 @@ body {
 }
 
 .footer-icon {
-
   margin: auto;
   box-sizing: border-box;
   fill: #83b3d3;
@@ -744,6 +806,11 @@ body {
 .catalog-filter-group-price {
   grid-column: 5/-3;
   border: none;
+  padding: 0;
+}
+
+.range {
+  margin-top: 34px;
 }
 
 .range-scale {
@@ -771,16 +838,22 @@ body {
   border: none;
 }
 
+.range-toggle:hover {
+  box-shadow: inset 0 0 0 2px #83B3D3;
+}
+
 .range-toggle:focus {
   box-shadow: inset 0 0 0 3px #83b3d3;
-  box-sizing: border-box;
   border-radius: 5px;
+  outline: none;
 }
+
+
 
 .range-toggle:active {
   box-shadow: inset 0 0 0 2px #83b3d3;
-  box-sizing: border-box;
   border-radius: 5px;
+  outline: none;
 }
 
 .toggle-min {
@@ -851,8 +924,10 @@ body {
 
 .apply-reset-button {
   grid-column: 7/-1;
-  align-self: end;
+  align-items: center;
+
 }
+
 
 .catalog-filter-item {
   list-style-type: none;
@@ -865,6 +940,8 @@ body {
   line-height: 26px;
 }
 
+
+
 .button-apply {
   width: 160px;
   height: 48px;
@@ -875,7 +952,7 @@ body {
   background-color: #83b3d3;
   border-radius: 10px;
   margin-bottom: 20px;
-  margin-right: 72px;
+  margin-top: 62px;
   border: 0px;
 }
 
@@ -887,7 +964,7 @@ body {
   line-height: 23px;
   text-transform: capitalize;
   color: #ffffff;
-  text-align: center;
+  margin-left: 40px;
 }
 
 .sorting-container {
@@ -1057,6 +1134,11 @@ body {
   background-color: #68a2ca;
 }
 
+.hotel-add-favourit:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+}
+
 .hotel-add-favourit.select {
   background-color: #7db54f;
 }
@@ -1068,6 +1150,12 @@ body {
 .hotel-add-favourit.select:focus {
   background-color: #6c9e42;
 }
+
+.hotel-add-favourit.select:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #6C9E42;
+}
+
 .stars {
   grid-area: stars;
   margin: auto;
@@ -1156,11 +1244,10 @@ body {
   justify-content: center;
   padding-top: 26px;
   margin-bottom: 100px;
-
 }
 
-.newsletter-catalog-email{
-  background-color: #F2F2F2;
+.newsletter-catalog-email {
+  background-color: #f2f2f2;
   border-radius: 10px 0px 0px 10px;
   margin: 0;
 }
@@ -1186,7 +1273,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  z-index: 5;
+  z-index: 3;
 }
 
 .modal-container-close {
@@ -1512,14 +1599,13 @@ body {
 
 .children-block::before {
   content: "";
-  display: block;
   position: absolute;
-  width: 10px;
-  height: 9px;
-  top: -3px;
-  right: 50%;
-  transform: translateX(-50%) rotate(226deg);
-  background: url("../images/arrow-children.png") no-repeat;
+  top: -8px;
+  left: 119px;
+  width: 20px;
+  height: 20px;
+  background: #333333;
+  transform: rotate(45deg);
 }
 
 .children-text {
@@ -1531,6 +1617,6 @@ body {
   line-height: 20px;
 }
 
-.children-block-activ {
+.children-block-close {
   display: block;
 }
