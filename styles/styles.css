@@ -131,8 +131,26 @@ body {
   fill: #756257;
 }
 
+.favorites-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 13px;
+  color: #ffffff;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: #7db54f;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+
+
 .popover {
-  display: none;
+  display: none; /* display: flex; для включения поповера */
   position: absolute;
   top: 41px;
   left: 50%;
@@ -900,7 +918,7 @@ body {
   color: #ffffff;
   text-align: left;
   background-color: transparent;
-  border: none;
+  outline: none;
   appearance: textfield;
   border: none;
   box-sizing: border-box;
@@ -908,8 +926,31 @@ body {
   line-height: 23px;
 }
 
-.catalog-filter-input-price::placeholder {
+.catalog-filter-label::placeholder {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.range-wrapper-inputs:hover {
+  opacity: 0.6;
+}
+
+.input-price-min:focus {
+  outline: none;
+  box-shadow: inset #83b3d3 0 1px 4px, inset #83b3d3 0 0 0 3px, #83b3d3 0 1px 4px, #83b3d3 0 0 0 3px;
+  border-radius: 4px 0 0 4px;
+  z-index: 10;
+}
+
+.input-price-max:focus {
+  outline: none;
+  box-shadow: inset #83b3d3 0 1px 4px, inset #83b3d3 0 0 0 3px, #83b3d3 0 1px 4px, #83b3d3 0 0 0 3px;
+  border-radius: 0 4px 4px 0;
+  z-index: 10;
+}
+
+.input-price-min:active,
+.input-price-max:active {
+  background-color: #756257;
 }
 
 .catalog-filter-input-price::-webkit-outer-spin-button,
@@ -956,6 +997,18 @@ body {
   border: 0px;
 }
 
+.button-apply:hover {
+  background: #68A2CA;
+}
+
+.button-apply:focus {
+  outline: 3px solid #FFFFFF;
+}
+
+.button-apply:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-reset {
   background: transparent;
   border: 0px;
@@ -965,6 +1018,15 @@ body {
   text-transform: capitalize;
   color: #ffffff;
   margin-left: 40px;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
 }
 
 .sorting-container {
@@ -1041,6 +1103,7 @@ body {
   gap: 58px;
   padding: 0;
   margin-left: 72px;
+  position: relative;
 }
 
 .hotel-card {
@@ -1091,6 +1154,7 @@ body {
 
 .hotel-card-title h3 {
   margin: 0;
+  width: fit-content;
 }
 
 .hotel-card-type {
@@ -1158,8 +1222,8 @@ body {
 
 .stars {
   grid-area: stars;
-  margin: auto;
-  align-self: center;
+  margin: 6px auto;
+
 }
 
 .rating {
@@ -1266,7 +1330,7 @@ body {
 }
 
 .modal-container {
-  display: flex;
+  display: none; /* display: flex; для открытия модального окна */
   position: fixed;
   top: 0;
   left: 0;
@@ -1276,9 +1340,6 @@ body {
   z-index: 3;
 }
 
-.modal-container-close {
-  display: none;
-}
 
 .modal {
   position: relative;
