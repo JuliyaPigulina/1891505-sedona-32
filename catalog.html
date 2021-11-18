@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>Каталог</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
@@ -11,17 +13,17 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a
-                class="navigation-link"
-                href="index.html"
-                >Главная</a
-              >
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="about.html">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+              <a
+                class="navigation-link navigation-link-current"
+                href="catalog.html"
+                >Гостиницы</a
+              >
             </li>
           </ul>
           <img
@@ -255,6 +257,8 @@
                   <svg
                     width="16"
                     height="14"
+                    aria-hidden="true"
+                    focusable="false"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -269,6 +273,8 @@
                   <svg
                     width="16"
                     height="14"
+                    aria-hidden="true"
+                    focusable="false"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -287,6 +293,8 @@
                     <svg
                       width="16"
                       height="14"
+                      aria-hidden="true"
+                      focusable="false"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -318,13 +326,14 @@
                 <span class="hotel-card-price">От 4000 ₽</span>
                 <a class="hotel-btn show-more" href="#">Подробнее</a>
                 <a class="hotel-add-favourit" href="#">В избранное</a>
-                <img
-                  class="stars"
-                  src="image/catalog/star-4.svg"
-                  alt="Четыре звезды"
-                  width="91"
-                  height="17"
-                />
+                <div class="stars">
+                  <ul class="box-stars">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
                 <span class="rating">Рейтинг: 8,5</span>
               </li>
               <li class="hotel-card">
@@ -343,13 +352,13 @@
                 <span class="hotel-card-price">От 3000 ₽</span>
                 <a class="hotel-btn show-more" href="#">Подробнее</a>
                 <a class="hotel-add-favourit" href="#">В избранное</a>
-                <img
-                  class="stars"
-                  src="image/catalog/star-3.svg"
-                  alt="Три звезды"
-                  width="68"
-                  height="17"
-                />
+                <div class="stars">
+                  <ul class="box-stars">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
                 <span class="rating">Рейтинг: 8,9</span>
               </li>
               <li class="hotel-card">
@@ -368,13 +377,12 @@
                 <span class="hotel-card-price">От 2000 ₽</span>
                 <a class="hotel-btn show-more" href="#">Подробнее</a>
                 <a class="hotel-add-favourit select" href="#">В избранном</a>
-                <img
-                  class="stars"
-                  src="image/catalog/star-2.svg"
-                  alt="Две звезды"
-                  width="43"
-                  height="17"
-                />
+                <div class="stars">
+                  <ul class="box-stars">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
                 <span class="rating">Рейтинг: 9,2</span>
               </li>
               <li class="hotel-card">
@@ -391,13 +399,12 @@
                 <span class="hotel-card-price">От 3000 ₽</span>
                 <a class="hotel-btn show-more" href="#">Подробнее</a>
                 <a class="hotel-add-favourit" href="#">В избранное</a>
-                <img
-                  class="stars"
-                  src="image/catalog/star-2.svg"
-                  alt="Две звезды"
-                  width="43"
-                  height="17"
-                />
+                <div class="stars">
+                  <ul class="box-stars">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
                 <span class="rating">Рейтинг: 9,2</span>
               </li>
             </ul>
@@ -445,19 +452,22 @@
               Подпишитесь на рассылку
             </h2>
             <p>
-              Только полезная информация и никакого спама,<br> честное бойскаутское!
+              Только полезная информация и никакого спама,<br />
+              честное бойскаутское!
             </p>
             <form class="newsletter-catalog-form" method="post">
               <p class="newsletter-catalog-email">
                 <label class="visually-hidden" for="newsletter-email"
-                  >Email</label>
+                  >Email</label
+                >
                 <input
                   class="field-catalog"
                   placeholder="Ваш e-mail"
                   type="email"
                   name="newsletter-email"
                   id="newsletter-email"
-                  required/>
+                  required
+                />
               </p>
               <button class="button newsletter-button-catalog" type="submit">
                 Подписаться
